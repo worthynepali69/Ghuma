@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghuma – Travel Nepal</title>
+    <!-- Google Fonts: Playfair Display & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-background: #ffffff;
+            --color-text-primary: #1a1a1a;
+            --color-text-secondary: #444444;
+            --color-primary-accent: #ff4500;
+            --color-secondary-accent: #ffa500;
+            --color-highlight: #ffd700;
+            --color-border: #f0f0f0;
+            --font-title: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 15px 40px rgba(255, 69, 0, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background-color: var(--color-background); color: var(--color-text-primary); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4 { font-family: var(--font-title); font-weight: 800; }
+        h2 { font-size: 2.5em; }
+        h3 { font-size: 1.8em; }
+        h4 { font-size: 1.3em; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        
+        header { padding: 20px 0; border-bottom: 1px solid var(--color-border); background: var(--color-background); }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .logo { font-family: var(--font-title); font-size: 2.2em; font-weight: 800; color: var(--color-text-primary); }
+        .logo span { color: var(--color-primary-accent); }
+        .search-container { position: relative; width: 100%; max-width: 350px; display: flex; align-items: center; }
+        .search-container .fa-magnifying-glass { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #aaa; }
+        #search-bar { width: 100%; padding: 10px 15px 10px 40px; border-radius: 20px; border: 2px solid var(--color-border); font-size: 0.9em; transition: all 0.3s ease; font-family: var(--font-body); }
+        #search-bar:focus { outline: none; border-color: var(--color-secondary-accent); box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.2); }
+
+        .category-nav { background: var(--color-background); padding: 20px 0; border-bottom: 1px solid var(--color-border); position: sticky; top: 0; z-index: 999; box-shadow: var(--shadow-light); }
+        .tabs { display: flex; gap: 10px; overflow-x: auto; white-space: nowrap; padding-bottom: 10px; scrollbar-width: none; }
+        .tabs::-webkit-scrollbar { display: none; }
+        .tab-button { background: #f4f4f4; color: var(--color-text-secondary); border: 2px solid var(--color-border); padding: 10px 22px; border-radius: 30px; cursor: pointer; font-weight: 600; font-size: 0.95em; transition: all 0.3s ease; }
+        .tab-button:hover { background: var(--color-secondary-accent); border-color: var(--color-secondary-accent); color: #fff; }
+        .tab-button.active { background: var(--color-primary-accent); border-color: var(--color-primary-accent); color: #fff; font-weight: 700; box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3); }
+        .tab-button .fa-solid { margin-right: 6px; }
+
+        #grid-view { padding: 50px 0; }
+        #grid-title { text-align: center; margin-bottom: 40px; color: var(--color-text-primary); }
+        #destination-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
+        .destination-card { background: var(--color-background); border-radius: 15px; box-shadow: var(--shadow-strong); overflow: hidden; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; opacity: 0; transform: translateY(20px); position: relative; }
+        .destination-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+        .card-image-wrapper { height: 220px; position: relative; overflow: hidden; background-color: #f0f0f0; }
+        .card-image { height: 100%; width: 100%; object-fit: cover; object-position: center top; transition: transform 0.4s ease; }
+        .destination-card:hover .card-image { transform: scale(1.05); }
+        .card-category-badge { position: absolute; top: 15px; left: 15px; background: rgba(255, 69, 0, 0.9); color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 0.8em; font-weight: 600; z-index: 2; }
+        .card-content { padding: 20px; }
+        .card-content h3 { margin-bottom: 8px; color: var(--color-text-primary); font-size: 1.5em; }
+        .card-content .location { font-size: 0.9em; color: var(--color-text-secondary); margin-bottom: 12px; display: flex; align-items: center; gap: 5px; }
+        .card-content .short-desc { font-size: 0.95em; color: var(--color-text-secondary); margin-bottom: 15px; }
+        .card-meta { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--color-border); padding-top: 15px; }
+        .rating { font-size: 1em; font-weight: 700; color: var(--color-secondary-accent); }
+        .rating .fa-star { color: var(--color-highlight); }
+
+        #description-view { display: none; padding: 40px 0; animation: fadeIn 0.5s ease; }
+        .back-button { display: inline-flex; align-items: center; gap: 8px; padding: 12px 25px; background-color: var(--color-text-primary); color: #fff; border: none; border-radius: 30px; cursor: pointer; margin-bottom: 30px; font-weight: 600; transition: all 0.3s; }
+        .back-button:hover { background-color: var(--color-primary-accent); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
+        .place-hero-image { width: 100%; height: 450px; object-fit: cover; object-position: center top; border-radius: 20px; margin-bottom: 30px; box-shadow: var(--shadow-strong); background-color: #f0f0f0; }
+        .detail-content-wrapper { max-width: 900px; margin: 0 auto; }
+        .detail-header h2 { font-size: 3.5em; color: var(--color-primary-accent); margin-bottom: 10px; }
+        .detail-header .location { font-size: 1.2em; font-weight: 600; color: var(--color-text-secondary); margin-bottom: 30px; }
+        .detail-section { margin-bottom: 40px; }
+        .detail-section h3 { font-size: 2em; color: var(--color-text-primary); margin-bottom: 15px; border-bottom: 3px solid var(--color-secondary-accent); padding-bottom: 10px; display: inline-block; }
+        .quick-facts { background: #fdfdfd; border: 1px solid var(--color-border); padding: 25px; border-radius: 15px; margin-bottom: 40px; box-shadow: var(--shadow-light); }
+        .quick-facts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .quick-facts p { font-size: 0.95em; margin-bottom: 5px; }
+        .quick-facts strong { display: block; color: var(--color-text-primary); font-weight: 600; }
+        .guide-list { list-style: none; padding-left: 0; }
+        .guide-list li { margin-bottom: 18px; padding-left: 30px; position: relative; }
+        .guide-list li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--color-primary-accent); position: absolute; left: 0; top: 2px; font-size: 1.1em; }
+        .guide-list strong { display: block; color: var(--color-text-primary); font-weight: 700; font-size: 1.1em; }
+        
+        #loading-indicator { text-align: center; padding: 50px; font-size: 1.2em; font-weight: 600; color: var(--color-text-secondary); }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .fade-in-grid > div { animation: fadeIn 0.5s ease-out forwards; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <div class="logo">Ghuma<span>.</span></div>
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="search-bar" placeholder="Search for a destination...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <nav class="category-nav">
+            <div class="container">
+                <div class="tabs" id="navigation-tabs"></div>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <section id="grid-view" style="display: block;">
+                <h2 id="grid-title">Popular Destinations</h2>
+                <div id="destination-grid">
+                     <div id="loading-indicator">
+                        <i class="fas fa-spinner fa-spin"></i> Loading Destinations...
+                    </div>
+                </div>
+            </section>
+
+            <section id="description-view">
+                <button class="back-button" id="back-to-grid">
+                    <i class="fas fa-arrow-left"></i> Back to Destinations
+                </button>
+                <div id="place-details-container"></div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // IMPORTANT: For this website to work by fetching 'data.json', you must run it
+        // from a local web server. Opening the index.html file directly in the browser
+        // will likely cause a security error (CORS policy).
+        //
+        // How to run a simple server:
+        // 1. Make sure you have Python installed.
+        // 2. Open a terminal or command prompt.
+        // 3. Navigate to the folder containing index.html and data.json.
+        // 4. Run the command: `python -m http.server`
+        // 5. Open your web browser and go to `http://localhost:8000`
+
+        const state = {
+            currentFilter: 'Popular',
+            activePlaceId: null,
+            categories: []
+        };
+
+        const dom = {
+            tabsContainer: document.getElementById('navigation-tabs'),
+            gridTitle: document.getElementById('grid-title'),
+            destinationGrid: document.getElementById('destination-grid'),
+            gridView: document.getElementById('grid-view'),
+            descriptionView: document.getElementById('description-view'),
+            backButton: document.getElementById('back-to-grid'),
+            detailsContainer: document.getElementById('place-details-container'),
+            loadingIndicator: document.getElementById('loading-indicator'),
+            searchBar: document.getElementById('search-bar')
+        };
+        
+        let allTravelData = [];
+
+        async function fetchData() {
+            try {
+                const response = await fetch('data.json');
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return await response.json();
+            } catch (error) {
+                console.error("Failed to fetch travel data:", error);
+                dom.destinationGrid.innerHTML = `<p style="color: red; text-align: center;">Error loading destinations. Please check the data.json file and the console for details.</p>`;
+                return [];
+            }
+        }
+
+        const levenshteinDistance = (a, b) => {
+            if (a.length === 0) return b.length;
+            if (b.length === 0) return a.length;
+            const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+            for (let i = 0; i <= a.length; i++) { matrix[0][i] = i; }
+            for (let j = 0; j <= b.length; j++) { matrix[j][0] = j; }
+            for (let j = 1; j <= b.length; j++) {
+                for (let i = 1; i <= a.length; i++) {
+                    const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+                    matrix[j][i] = Math.min(matrix[j][i - 1] + 1, matrix[j - 1][i] + 1, matrix[j - 1][i - 1] + cost);
+                }
+            }
+            return matrix[b.length][a.length];
+        };
+        
+        function createCardHTML(place) {
+            const rating = (place.popularity / 20).toFixed(1);
+            return `
+                <div class="destination-card" data-id="${place.id}">
+                    <div class="card-image-wrapper">
+                        <div class="card-category-badge">${place.category}</div>
+                        <img src="images/${place.image}" alt="${place.name}" class="card-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x300/CCCCCC/FFFFFF?text=Image+Not+Found';">
+                    </div>
+                    <div class="card-content">
+                        <h3>${place.name}</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> ${place.location}</p>
+                        <p class="short-desc">${place.shortDesc}</p>
+                        <div class="card-meta">
+                            <span class="rating"><i class="fas fa-star"></i> ${rating}</span>
+                            <span>More Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        
+        function createDescriptionHTML(place) {
+            const { name, image, location, longDesc, guide, facts } = place;
+            return `
+                <img src="images/${image}" alt="${name}" class="place-hero-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x450/CCCCCC/FFFFFF?text=Image+Not+Found';">
+                <div class="detail-content-wrapper">
+                    <div class="detail-header">
+                        <h2>${name}</h2>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> ${location}</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3><i class="fas fa-info-circle"></i> About ${name}</h3>
+                        <p>${longDesc}</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3><i class="fas fa-clipboard-list"></i> Quick Facts</h3>
+                        <div class="quick-facts"><div class="quick-facts-grid">
+                            ${Object.entries(facts).map(([k, v]) => `<p><strong>${k.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}:</strong> ${v}</p>`).join('')}
+                        </div></div>
+                    </div>
+                    <div class="detail-section">
+                        <h3><i class="fas fa-map-signs"></i> Travel Guide</h3>
+                        <ul class="guide-list">
+                            ${Object.entries(guide).map(([k, v]) => `<li><strong>${k.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}:</strong> ${v}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>`;
+        }
+
+        function renderTabs() {
+            // FIX: Corrected 'National Parks: ' to 'National Parks' to match JSON category.
+            const icons = { Popular: 'fa-star', Mountains: 'fa-mountain', Temples: 'fa-gopuram', Stupas: 'fa-dharmachakra', Lakes: 'fa-water', Hills: 'fa-mound', 'National Parks': 'fa-tree', Others: 'fa-city' };
+            dom.tabsContainer.innerHTML = state.categories.map(cat => `
+                <button class="tab-button ${cat === state.currentFilter ? 'active' : ''}" data-filter="${cat}">
+                    <i class="fa-solid ${icons[cat] || 'fa-map-pin'}"></i> ${cat}
+                </button>`).join('');
+            setupTabListeners();
+        }
+
+        function renderGrid(filter) {
+            let filteredData = [];
+            if (filter === 'Popular') {
+                filteredData = [...allTravelData].sort((a, b) => b.popularity - a.popularity).slice(0, 15);
+                dom.gridTitle.textContent = `Trending Destinations`;
+            } else {
+                filteredData = allTravelData.filter(place => place.category === filter);
+                dom.gridTitle.textContent = `Explore ${filter}`;
+            }
+            
+            dom.loadingIndicator.style.display = 'none';
+            dom.destinationGrid.innerHTML = filteredData.length > 0 ? filteredData.map(createCardHTML).join('') : `<p style="text-align:center;">No destinations found in this category.</p>`;
+            dom.destinationGrid.classList.remove('fade-in-grid');
+            void dom.destinationGrid.offsetWidth;
+            dom.destinationGrid.classList.add('fade-in-grid');
+
+            state.currentFilter = filter;
+            setupCardListeners();
+            dom.gridView.style.display = 'block';
+            dom.descriptionView.style.display = 'none';
+        }
+        
+        function renderSearchResults(results, term) {
+            dom.gridTitle.textContent = `Found ${results.length} results for "${term}"`;
+            dom.destinationGrid.innerHTML = results.length ? results.map(createCardHTML).join('') : `<p style="text-align:center;">No destinations found matching your search.</p>`;
+            setupCardListeners();
+            dom.tabsContainer.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            dom.gridView.style.display = 'block';
+            dom.descriptionView.style.display = 'none';
+        }
+
+        function renderDescription(placeId) {
+            const place = allTravelData.find(p => p.id === placeId);
+            if (!place) return;
+            window.scrollTo(0, 0);
+            dom.detailsContainer.innerHTML = createDescriptionHTML(place);
+            state.activePlaceId = placeId;
+            dom.gridView.style.display = 'none';
+            dom.descriptionView.style.display = 'block';
+        }
+
+        function setupTabListeners() {
+            dom.tabsContainer.querySelectorAll('.tab-button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const filter = e.currentTarget.dataset.filter;
+                    dom.searchBar.value = '';
+                    if (state.currentFilter !== filter || dom.gridView.style.display === 'none') {
+                         renderGrid(filter);
+                    }
+                    dom.tabsContainer.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                    e.currentTarget.classList.add('active');
+                });
+            });
+        }
+
+        function setupCardListeners() {
+            dom.destinationGrid.querySelectorAll('.destination-card').forEach(card => {
+                card.addEventListener('click', (e) => renderDescription(e.currentTarget.dataset.id));
+            });
+        }
+        
+        function handleSearch() {
+            const searchTerm = dom.searchBar.value.toLowerCase().trim();
+            if (searchTerm.length > 1) {
+                const results = allTravelData.filter(place => {
+                    const placeName = place.name.toLowerCase();
+                    const distance = levenshteinDistance(searchTerm, placeName.substring(0, searchTerm.length));
+                    return placeName.includes(searchTerm) || distance <= 2;
+                });
+                renderSearchResults(results, searchTerm);
+            } else if (searchTerm.length === 0) {
+                renderGrid('Popular');
+                dom.tabsContainer.querySelector(`[data-filter="Popular"]`).classList.add('active');
+            }
+        }
+
+        dom.backButton.addEventListener('click', () => {
+            dom.gridView.style.display = 'block';
+            dom.descriptionView.style.display = 'none';
+            document.getElementById('grid-view').scrollIntoView();
+            if(state.currentFilter){
+                 dom.tabsContainer.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.filter === state.currentFilter);
+                });
+            }
+        });
+
+        dom.searchBar.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                handleSearch();
+            }
+        });
+
+        async function initialize() {
+            allTravelData = await fetchData();
+            if (allTravelData.length > 0) {
+                const uniqueCategories = [...new Set(allTravelData.map(item => item.category))];
+                const othersIndex = uniqueCategories.indexOf('Others');
+                if (othersIndex > -1) {
+                    uniqueCategories.splice(othersIndex, 1);
+                }
+                uniqueCategories.sort();
+                state.categories = ['Popular', ...uniqueCategories];
+                if(allTravelData.some(p => p.category === 'Others')) {
+                    state.categories.push('Others');
+                }
+                
+                renderTabs();
+                renderGrid('Popular');
+            }
+        }
+        document.addEventListener('DOMContentLoaded', initialize);
+    </script>
+</body>
+</html>
+
