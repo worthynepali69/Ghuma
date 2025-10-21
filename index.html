@@ -194,7 +194,7 @@
                 <div class="destination-card" data-id="${place.id}">
                     <div class="card-image-wrapper">
                         <div class="card-category-badge">${place.category}</div>
-                        <img src="images/${place.image}" alt="${place.name}" class="card-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x300/CCCCCC/FFFFFF?text=Image+Not+Found';">
+                        <img src="${place.image}" alt="${place.name}" class="card-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x300/CCCCCC/FFFFFF?text=Image+Not+Found';">
                     </div>
                     <div class="card-content">
                         <h3>${place.name}</h3>
@@ -211,7 +211,7 @@
         function createDescriptionHTML(place) {
             const { name, image, location, longDesc, guide, facts } = place;
             return `
-                <img src="images/${image}" alt="${name}" class="place-hero-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x450/CCCCCC/FFFFFF?text=Image+Not+Found';">
+                <img src="${image}" alt="${name}" class="place-hero-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x450/CCCCCC/FFFFFF?text=Image+Not+Found';">
                 <div class="detail-content-wrapper">
                     <div class="detail-header">
                         <h2>${name}</h2>
@@ -237,7 +237,6 @@
         }
 
         function renderTabs() {
-            // FIX: Corrected 'National Parks: ' to 'National Parks' to match JSON category.
             const icons = { Popular: 'fa-star', Mountains: 'fa-mountain', Temples: 'fa-gopuram', Stupas: 'fa-dharmachakra', Lakes: 'fa-water', Hills: 'fa-mound', 'National Parks': 'fa-tree', Others: 'fa-city' };
             dom.tabsContainer.innerHTML = state.categories.map(cat => `
                 <button class="tab-button ${cat === state.currentFilter ? 'active' : ''}" data-filter="${cat}">
