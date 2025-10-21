@@ -1,0 +1,393 @@
+[
+{
+"id": "everest_base_camp",
+"category": "Mountains",
+"name": "Everest Base Camp",
+"image": "everest_base_camp.png",
+"location": "Khumbu Region",
+"shortDesc": "Trek to the foot of the world's highest peak, Mt. Everest.",
+"longDesc": "The Everest Base Camp (EBC) trek is one of the most iconic trekking adventures in the world, a pilgrimage for adventurers seeking to stand in the shadow of the planet's highest peak. It offers a unique opportunity to journey through the heart of the Himalayas, experiencing not just the incredible mountain scenery but the profound and resilient culture of the Sherpa people. The journey is as much about the destination as the path itself, which begins in verdant, rhododendron-filled valleys and gradually ascends into a stark, alpine world. As you climb, you are enveloped in the rich spiritual tapestry of Sherpa life; prayer flags flutter on high passes, mani stones carved with ancient mantras line the trail, and serene monasteries like Tengboche offer spiritual solace against a backdrop of breathtaking peaks. The trail winds through bustling hubs like Namche Bazaar and past a panorama of towering, ice-clad giants like Lhotse, Nuptse, and the exquisitely beautiful Ama Dablam. Reaching the base camp, a sprawling city of tents during climbing season, and standing before the chaotic beauty of the Khumbu Icefall is a humbling and triumphant experience, culminating an unforgettable journey to the foot of the mighty Sagarmatha (Mt. Everest).",
+"guide": {
+"best_months": "March-May, September-November",
+"weather": "Cold, with temperatures dropping well below freezing at night. Days can be sunny and pleasant.",
+"road_conditions": "Fly to Lukla. The trail is a well-trodden trekking path; no roads.",
+"difficulty": "Strenuous"
+},
+"facts": { "altitude": "5,364 m", "duration": "12-14 days", "type": "Trekking" },
+"popularity": 100
+},
+{
+"id": "annapurna_base_camp",
+"category": "Mountains",
+"name": "Annapurna Base Camp",
+"image": "annapurna_base_camp.png",
+"location": "Annapurna Region",
+"shortDesc": "Trek into a natural amphitheater of giant Himalayan peaks.",
+"longDesc": "The trek to Annapurna Base Camp (ABC) is a spectacular journey that brings you face-to-face with some of the world's highest and most beautiful mountains, including Annapurna I (8,091m). The trail passes through diverse ecosystems, from lush rhododendron forests to alpine landscapes, and offers a glimpse into the local Gurung culture.",
+"guide": {
+"best_months": "October-December, March-April",
+"weather": "Varies from subtropical to alpine. Can be cold at the base camp.",
+"road_conditions": "Drive to Nayapul from Pokhara, then trek. The trail is well-maintained.",
+"difficulty": "Strenuous"
+},
+"facts": { "altitude": "4,130 m", "duration": "7-10 days", "type": "Trekking" },
+"popularity": 99
+},
+{
+"id": "mardi_himal_trek",
+"category": "Mountains",
+"name": "Mardi Himal Trek",
+"image": "mardi_himal.png",
+"location": "Annapurna Region",
+"shortDesc": "An off-the-beaten-path trek with incredible views of Machhapuchhre.",
+"longDesc": "The Mardi Himal Trek is a hidden gem in the Annapurna region, offering breathtakingly close-up views of Machhapuchhre (Fishtail), Annapurna South, and Hiunchuli. The trail takes you through pristine forests and along a high ridge, providing a sense of solitude and adventure away from the more crowded trails.",
+"guide": {
+"best_months": "September-November, March-May",
+"weather": "Moderate temperatures at lower altitudes, cold at the top. Prone to snow in winter.",
+"road_conditions": "Drive to Kande from Pokhara, then begin the trek.",
+"difficulty": "Moderate"
+},
+"facts": { "altitude": "4,500 m (High Camp)", "duration": "5-7 days", "type": "Trekking" },
+"popularity": 95
+},
+{
+"id": "upper_mustang",
+"category": "Hills",
+"name": "Upper Mustang",
+"image": "upper_mustang.png",
+"location": "Mustang District",
+"shortDesc": "The last forbidden kingdom, a Tibetan plateau of stark beauty.",
+"longDesc": "Upper Mustang is a mystical land of windswept landscapes, ancient cave dwellings, and vibrant Tibetan Buddhist culture. This high-altitude desert, concealed behind the Himalayan range, was a restricted kingdom until 1992. Trekking here feels like stepping into another century, with its walled city of Lo Manthang, centuries-old monasteries, and dramatic, colorful rock formations.",
+"guide": {
+"best_months": "April-May, September-October (avoids monsoon and extreme cold)",
+"weather": "Dry, windy, and cold. It lies in a rain shadow, so it's accessible during the monsoon.",
+"road_conditions": "A rough jeep track exists to Lo Manthang, but trekking is the best experience. Fly to Jomsom to start.",
+"difficulty": "Strenuous (High altitude)"
+},
+"facts": { "altitude": "Averages 4,000 m", "permits": "Restricted Area Permit", "type": "Cultural Trek" },
+"popularity": 98
+},
+{
+"id": "ghandruk_village",
+"category": "Hills",
+"name": "Ghandruk Village",
+"image": "ghandruk_village.png",
+"location": "Kaski District, Annapurna Region",
+"shortDesc": "A picturesque Gurung village with stunning mountain views.",
+"longDesc": "Ghandruk is one of the most famous and beautiful villages in the Annapurna region. It offers a traditional Gurung cultural experience with stone-roofed houses, a local museum, and warm hospitality. The village provides breathtaking, close-up views of Annapurna South, Hiunchuli, and the iconic Machhapuchhre (Fishtail).",
+"guide": {
+"best_months": "September-November, March-May",
+"weather": "Pleasant days, cool nights. Clear skies are common during peak seasons.",
+"road_conditions": "A jeep track now reaches near the village from Pokhara, followed by a short hike.",
+"difficulty": "Easy to Moderate"
+},
+"facts": { "altitude": "2,012 m", "type": "Cultural Village", "ethnic_group": "Gurung" },
+"popularity": 94
+},
+{
+"id": "bandipur",
+"category": "Hills",
+"name": "Bandipur",
+"image": "bandipur.png",
+"location": "Tanahun District",
+"shortDesc": "A beautifully preserved Newari town with stunning Himalayan panoramas.",
+"longDesc": "Bandipur is a living museum of Newari culture, a hilltop settlement with its main street lined with traditional row houses. This vehicle-free town offers a peaceful ambiance, stunning views of the Annapurna and Manaslu ranges, and opportunities for short hikes to nearby viewpoints and caves.",
+"guide": {
+"best_months": "October-March for the clearest mountain views.",
+"weather": "Moderate and pleasant year-round.",
+"road_conditions": "Good road access from the Prithvi Highway, located between Kathmandu and Pokhara.",
+"difficulty": "Easy"
+},
+"facts": { "altitude": "1,030 m", "type": "Hill Station", "vibe": "Historic, Tranquil" },
+"popularity": 92
+},
+{
+"id": "tansen_palpa",
+"category": "Hills",
+"name": "Tansen, Palpa",
+"image": "tansen.png",
+"location": "Palpa District",
+"shortDesc": "A charming medieval hill town with a rich history and culture.",
+"longDesc": "Tansen is a beautiful hill town that was once the capital of a powerful kingdom. It retains its medieval atmosphere with cobbled streets, traditional houses, and the impressive Tansen Durbar. The town is also famous for Dhaka fabric, the traditional Nepali textile. It offers excellent views and is a gateway to the famous Rani Mahal palace.",
+"guide": {
+"best_months": "September-May",
+"weather": "Pleasant climate throughout the year.",
+"road_conditions": "Well-connected by road from Pokhara and Lumbini.",
+"difficulty": "Easy"
+},
+"facts": { "altitude": "1,350 m", "famous_for": "Dhaka fabric", "type": "Historic Town" },
+"popularity": 88
+},
+{
+"id": "ghale_gaun",
+"category": "Hills",
+"name": "Ghale Gaun",
+"image": "ghale_gaun.png",
+"location": "Lamjung District",
+"shortDesc": "An award-winning model village for community-based tourism and homestays.",
+"longDesc": "Ghale Gaun offers an authentic and immersive cultural experience. This picturesque village is renowned for its well-managed homestay program, allowing visitors to live with local Gurung families. The hospitality is legendary, and the views of the surrounding mountains, including Annapurna and Manaslu, are spectacular.",
+"guide": {
+"best_months": "September-November, February-April",
+"weather": "Pleasant, with clear views in autumn and spring.",
+"road_conditions": "Accessible via a rough road from Besisahar. 4WD is recommended.",
+"difficulty": "Easy to Moderate"
+},
+"facts": { "altitude": "2,100 m", "type": "Homestay Village", "vibe": "Authentic, Cultural" },
+"popularity": 90
+},
+{
+"id": "sikles_village",
+"category": "Hills",
+"name": "Sikles Village",
+"image": "sikles.png",
+"location": "Kaski District",
+"shortDesc": "One of the largest traditional Gurung villages in Nepal.",
+"longDesc": "Sikles is a large, well-preserved Gurung village that offers a deep dive into traditional Nepali hill life. It's located off the main trekking trails, providing a more authentic and less commercialized experience. The village is set against a stunning backdrop of the Annapurna II and Lamjung Himal peaks.",
+"guide": {
+"best_months": "Autumn (Oct-Nov) and Spring (Mar-Apr)",
+"weather": "Moderate climate. Can be wet during the monsoon.",
+"road_conditions": "A rough jeep road now connects to the village from Pokhara, taking several hours.",
+"difficulty": "Moderate"
+},
+"facts": { "altitude": "2,000 m", "type": "Traditional Village", "famous_for": "Eco-tourism" },
+"popularity": 87
+},
+{
+"id": "phewa_lake",
+"category": "Lakes",
+"name": "Phewa Lake",
+"image": "phewa_lake.png",
+"location": "Pokhara",
+"shortDesc": "The vibrant heart of Pokhara, reflecting the Annapurnas.",
+"longDesc": "Phewa Lake is the soul of Pokhara. On a clear day, its calm waters perfectly mirror the snow-capped peaks of Machhapuchhre and the Annapurna range. Visitors can rent colorful 'doongas' (boats) to paddle to the Tal Barahi Temple, a two-storied pagoda on a small island in the lake. The lakeside area is bustling with cafes, restaurants, and shops.",
+"guide": {
+"best_months": "October-February for the calmest water and clearest views.",
+"weather": "Pleasant year-round, but can be rainy during the monsoon.",
+"road_conditions": "Located within Pokhara city, easily accessible.",
+"difficulty": "Easy"
+},
+"facts": { "type": "Freshwater Lake", "feature": "Tal Barahi Temple", "vibe": "Relaxing, Scenic" },
+"popularity": 97
+},
+{
+"id": "tilicho_lake",
+"category": "Lakes",
+"name": "Tilicho Lake",
+"image": "tilicho_lake.png",
+"location": "Manang District",
+"shortDesc": "One of the highest lakes in the world, a stunning turquoise jewel.",
+"longDesc": "Nestled at a breathtaking altitude, Tilicho Lake is a side-trek from the famous Annapurna Circuit that rewards the adventurous with surreal beauty. The turquoise water is set against a backdrop of the immense, snow-covered Grande Barrière. The trek to the lake is challenging, involving landslide-prone areas, but the view is considered one of the most spectacular in the Himalayas.",
+"guide": {
+"best_months": "September-October, April-May",
+"weather": "Extremely cold, high winds are common. High chance of snow.",
+"road_conditions": "No roads. It's a high-altitude trek from Manang.",
+"difficulty": "Challenging"
+},
+"facts": { "altitude": "4,919 m", "type": "Alpine Lake", "vibe": "Surreal, Challenging" },
+"popularity": 95
+},
+{
+"id": "rara_lake",
+"category": "Lakes",
+"name": "Rara Lake",
+"image": "rara_lake.png",
+"location": "Mugu District",
+"shortDesc": "The largest and deepest freshwater lake in the Nepali Himalayas.",
+"longDesc": "Rara Lake is an 'off-the-beaten-path' gem, often described as 'heaven on earth.' Its shimmering blue waters are surrounded by lush green hills and snow-capped peaks. Located within Rara National Park, the area is pristine, remote, and incredibly peaceful. The journey here is an adventure itself, but the reward is an untouched paradise.",
+"guide": {
+"best_months": "September-November, April-May",
+"weather": "Pleasant during the day, cold at night. Winter brings heavy snow.",
+"road_conditions": "A very rough road exists, but flying to Talcha airport is the best option.",
+"difficulty": "Moderate (due to remoteness)"
+},
+"facts": { "altitude": "2,990 m", "type": "Alpine Lake", "vibe": "Pristine, Remote" },
+"popularity": 96
+},
+{
+"id": "begnas_lake",
+"category": "Lakes",
+"name": "Begnas Lake",
+"image": "begnas_lake.png",
+"location": "Pokhara",
+"shortDesc": "A tranquil and pristine freshwater lake near Pokhara city.",
+"longDesc": "Begnas Lake is the quieter, more pristine sibling of Phewa Lake. Located a short drive from Pokhara, it offers a peaceful escape with clean water perfect for swimming and boating. The surrounding area is lush and green, dotted with resorts and local fish restaurants, making it an ideal spot for relaxation and nature lovers.",
+"guide": {
+"best_months": "Year-round.",
+"weather": "Similar to Pokhara, warm and pleasant.",
+"road_conditions": "Easily accessible by road from Pokhara.",
+"difficulty": "Easy"
+},
+"facts": { "type": "Freshwater Lake", "vibe": "Tranquil, Clean", "activities": "Boating, Fishing, Swimming" },
+"popularity": 89
+},
+{
+"id": "pashupatinath_temple",
+"category": "Temples",
+"name": "Pashupatinath Temple",
+"image": "pashupatinath.png",
+"location": "Kathmandu",
+"shortDesc": "The most sacred Hindu temple in Nepal, on the Bagmati River.",
+"longDesc": "Pashupatinath is a sprawling complex of temples and ashrams, a UNESCO World Heritage Site. As the seat of the national deity, it's a hub of spiritual energy. Visitors can witness open-air cremation ceremonies on the river banks, a profound reflection on life and death. The evening 'Aarti' ceremony is a mesmerizing spectacle of light, music, and devotion.",
+"guide": {
+"best_months": "Year-round. Evenings for Aarti ceremony.",
+"weather": "Kathmandu city weather.",
+"road_conditions": "Located within Kathmandu, easily accessible.",
+"difficulty": "Easy"
+},
+"facts": { "deity": "Lord Shiva", "unesco": "Yes", "type": "Hindu Temple" },
+"popularity": 94
+},
+{
+"id": "muktinath_temple",
+"category": "Temples",
+"name": "Muktinath Temple",
+"image": "muktinath.png",
+"location": "Mustang District",
+"shortDesc": "A sacred place of salvation for both Hindus and Buddhists.",
+"longDesc": "Muktinath is a highly revered temple located at a high altitude in the Mustang region. It's a place of great religious significance, featuring 108 water spouts, an eternal flame, and stunning views of the surrounding Himalayan desert. Pilgrims believe that bathing in the holy water brings salvation (moksha).",
+"guide": {
+"best_months": "March-May, September-November",
+"weather": "Cold, dry, and very windy.",
+"road_conditions": "Accessible via a scenic but rough road from Jomsom. Also accessible by helicopter.",
+"difficulty": "Moderate (due to altitude)"
+},
+"facts": { "altitude": "3,800 m", "type": "Pilgrimage Site", "significance": "Hindu & Buddhist" },
+"popularity": 93
+},
+{
+"id": "mayadevi_temple",
+"category": "Temples",
+"name": "Maya Devi Temple, Lumbini",
+"image": "mayadevi_temple.png",
+"location": "Lumbini",
+"shortDesc": "The sacred temple marking the exact birthplace of Lord Buddha.",
+"longDesc": "Located in the heart of the Lumbini sacred garden, the Maya Devi Temple is the most important site in this UNESCO World Heritage area. It houses the exact spot where Queen Maya Devi gave birth to Siddhartha Gautama. Adjacent to the temple are the Ashokan Pillar and the sacred Pushkarini pond.",
+"guide": {
+"best_months": "October-March to avoid the heat.",
+"weather": "Hot and humid in summer, pleasant in winter.",
+"road_conditions": "Excellent road access. Located in the Terai plains.",
+"difficulty": "Easy"
+},
+"facts": { "significance": "Birthplace of Buddha", "unesco": "Yes", "type": "Buddhist Temple" },
+"popularity": 96
+},
+{
+"id": "bhairabsthan_temple",
+"category": "Temples",
+"name": "Bhairabsthan Temple",
+"image": "bhairabsthan_temple.png",
+"location": "Palpa District",
+"shortDesc": "A powerful hilltop temple dedicated to the fearsome deity Bhairab.",
+"longDesc": "Perched on a hill near Tansen, the Bhairabsthan Temple is dedicated to Bhairab, a fierce manifestation of Lord Shiva. The temple is famous for its large ceremonial sword (khadga) and receives numerous animal sacrifices, particularly on Tuesdays and Saturdays. It offers panoramic views of the Himalayas on clear days.",
+"guide": {
+"best_months": "All year, but views are best in autumn.",
+"weather": "Pleasant hill climate.",
+"road_conditions": "Accessible by a short drive or a steep hike from Tansen.",
+"difficulty": "Easy to Moderate"
+},
+"facts": { "deity": "Bhairab", "type": "Hindu Temple", "vibe": "Powerful, Spiritual" },
+"popularity": 86
+},
+{
+"id": "boudhanath_stupa",
+"category": "Stupas",
+"name": "Boudhanath Stupa",
+"image": "boudhanath_stupa.png",
+"location": "Kathmandu",
+"shortDesc": "One of the largest and most sacred spherical stupas in the world.",
+"longDesc": "The Boudhanath Stupa, with its colossal mandala and ever-watchful Eyes of Buddha, is a beacon of Tibetan Buddhism in Nepal. The area is a hub for meditation, with dozens of monasteries surrounding the stupa. Walking 'kora' (clockwise) around the stupa with pilgrims, spinning prayer wheels, is a deeply peaceful and meditative experience.",
+"guide": {
+"best_months": "Year-round. Mornings and evenings are most atmospheric.",
+"weather": "Kathmandu city weather.",
+"road_conditions": "Easily accessible within Kathmandu.",
+"difficulty": "Easy"
+},
+"facts": { "unesco": "Yes", "type": "Buddhist Stupa", "vibe": "Spiritual, Peaceful" },
+"popularity": 95
+},
+{
+"id": "swayambhunath_stupa",
+"category": "Stupas",
+"name": "Swayambhunath Stupa",
+"image": "swayambhunath_stupa.png",
+"location": "Kathmandu",
+"shortDesc": "The 'Monkey Temple,' an ancient stupa overlooking the Kathmandu Valley.",
+"longDesc": "Perched atop a hill, Swayambhunath is one of the oldest and most important religious sites in Nepal. It offers panoramic views of Kathmandu city. The complex is a blend of Buddhist and Hindu iconography and is famous for the hundreds of monkeys that inhabit the area.",
+"guide": {
+"best_months": "Year-round.",
+"weather": "Kathmandu city weather.",
+"road_conditions": "Accessible by road, with a steep staircase to the top.",
+"difficulty": "Easy (but involves climbing stairs)"
+},
+"facts": { "nickname": "Monkey Temple", "unesco": "Yes", "type": "Buddhist Stupa" },
+"popularity": 93
+},
+{
+"id": "chitwan_national_park",
+"category": "National Parks",
+"name": "Chitwan National Park",
+"image": "chitwan_national_park.png",
+"location": "Terai Lowlands",
+"shortDesc": "Home to the one-horned rhino, Bengal tiger, and diverse wildlife.",
+"longDesc": "A UNESCO World Heritage Site, Chitwan offers a completely different side of Nepal: a hot, tropical jungle. It's one of the best wildlife-viewing parks in Asia. Embark on a jeep safari, canoe ride on the Rapti River, or a jungle walk to spot the endangered one-horned rhinoceros, Royal Bengal tigers (elusive!), gharial crocodiles, and over 500 species of birds.",
+"guide": {
+"best_months": "October-March (cooler and drier weather).",
+"weather": "Hot and humid, especially in summer. Pleasant in winter.",
+"road_conditions": "Excellent road access to Sauraha, the main tourist hub.",
+"difficulty": "Easy"
+},
+"facts": { "unesco": "Yes", "wildlife": "Rhino, Tiger, Elephant", "type": "Jungle Safari" },
+"popularity": 92
+},
+{
+"id": "bardiya_national_park",
+"category": "National Parks",
+"name": "Bardiya National Park",
+"image": "bardiya_national_park.png",
+"location": "Terai Lowlands, Far-West",
+"shortDesc": "A remote and wild park, offering the best chance to see a Bengal tiger.",
+"longDesc": "Bardiya National Park is a vast, pristine wilderness in Nepal's far west. It is less crowded than Chitwan and is considered by many to be the best place in Nepal to spot the elusive Royal Bengal tiger. The park also boasts a healthy population of wild elephants, rhinos, and two species of crocodile.",
+"guide": {
+"best_months": "October-April.",
+"weather": "Hot and humid. Dry season offers better visibility.",
+"road_conditions": "Long journey by road. Fly to Nepalgunj, then drive for 2-3 hours.",
+"difficulty": "Easy (for safaris)"
+},
+"facts": { "vibe": "Wild, Remote", "wildlife": "Tiger, Elephant, Rhino", "type": "Jungle Safari" },
+"popularity": 85
+},
+{
+"id": "bhaktapur_durbar_square",
+"category": "Others",
+"name": "Bhaktapur Durbar Square",
+"image": "bhaktapur_durbar_square.png",
+"location": "Kathmandu Valley",
+"shortDesc": "A perfectly preserved medieval city of kings, art, and culture.",
+"longDesc": "Bhaktapur is a living museum. Unlike Kathmandu and Patan, its Durbar Square is car-free, allowing you to step back in time. Marvel at the 55-Window Palace, the Golden Gate, and the towering Nyatapola Temple. Don't miss Pottery Square, where artisans create works by hand, and be sure to try the local 'Juju Dhau' (King Curd).",
+"guide": {
+"best_months": "Year-round.",
+"weather": "Kathmandu city weather.",
+"road_conditions": "Good road access from Kathmandu.",
+"difficulty": "Easy"
+},
+"facts": { "unesco": "Yes", "vibe": "Artistic, Historical", "famous_for": "Juju Dhau (King Curd)" },
+"popularity": 93
+},
+{
+"id": "rani_mahal",
+"category": "Others",
+"name": "Rani Mahal (The Queen's Palace)",
+"image": "rani_mahal.png",
+"location": "Palpa District",
+"shortDesc": "Nepal's 'Taj Mahal,' a historic palace on the banks of the Kali Gandaki.",
+"longDesc": "Rani Mahal is a beautiful neoclassical palace built in 1893 by General Khadga Shumsher in memory of his beloved late wife. Its secluded location on the banks of the Kali Gandaki river, away from any major town, adds to its romantic and melancholic charm. The journey to the palace is an adventure, but its stunning architecture and poignant story make it worthwhile.",
+"guide": {
+"best_months": "September-May (avoiding monsoon)",
+"weather": "Pleasant hill climate.",
+"road_conditions": "The road from Tansen is rough and often requires a 4WD or a long hike.",
+"difficulty": "Moderate (due to access)"
+},
+"facts": { "nickname": "Taj Mahal of Nepal", "type": "Historical Palace", "vibe": "Romantic, Historic" },
+"popularity": 85
+}
+]
